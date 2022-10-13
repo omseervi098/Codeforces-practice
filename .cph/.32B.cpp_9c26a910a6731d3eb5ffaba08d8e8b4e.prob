@@ -1,0 +1,1 @@
+{"name":"Local: 32B","url":"d:\\Codeforces Practice\\32B.cpp","tests":[{"id":1664807888761,"input":".-.--","output":""},{"id":1664807897037,"input":"--.","output":""},{"id":1664807906852,"input":"-..-.--","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces Practice\\32B.cpp","group":"local","local":true}
