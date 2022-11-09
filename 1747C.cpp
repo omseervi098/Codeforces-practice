@@ -22,17 +22,18 @@ int main()
     {
         int n;
         cin >> n;
-
-        int k = 3 * n;
-        int t = n / 2 + n % 2;
-        ll temp = n;
-        int m = 1;
-        cout << t << endl;
-        while (t-- > 0)
+        vi v(n);
+        for (auto &i : v)
+            cin >> i;
+        int mn = *min_element(v.begin(), v.end());
+        if (mn == v[0])
         {
-            cout << m << " " << k << endl;
-            m += 3;
-            k -= 3;
+            cout << "Bob" << endl;
+        }
+        else
+        {
+            cout << "Alice" << endl;
         }
     }
 }
+// 1 2 1 --> 2 1 0 --> 1 1 0 --> 1 0 0 --> 0 0 0

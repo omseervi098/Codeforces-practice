@@ -16,20 +16,17 @@ typedef priority_queue<int> maxhp;
 #define test(t) while (t--)
 int main()
 {
-    int t;
-    cin >> t;
-    test(t)
+    string s;
+    cin >> s;
+    vector<string> v(5);
+    for (auto &it : v)
     {
-        int n;
-        cin >> n;
-        vi v(n);
-        for (auto &i : v)
-            cin >> i;
-        int sm = accumulate(v.begin(), v.end(), 0);
-        if (sm % 2 == 0)
-            cout << "Bob" << endl;
-        else if (sm % 2 == 1 and n % 2 == 1)
-            cout << "Alice" << endl;
+        cin >> it;
+        if (it[0] == s[0] || it[1] == s[1])
+        {
+            cout << "YES" << endl;
+            return 0;
+        }
     }
+    cout << "NO" << endl;
 }
-// 1 2 1 --> 2 1 0 --> 1 1 0 --> 1 0 0 --> 0 0 0
