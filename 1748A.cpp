@@ -20,38 +20,11 @@ int main()
     cin >> t;
     test(t)
     {
-        int n, m;
-        cin >> n >> m;
-        vector<bool> check(n * n);
-        for (int i = 0; i < m; i++)
-        {
-            int x, y;
-            cin >> x >> y;
-            check[x - 1] = true;
-            check[x + (y) * (n)] = true;
-        }
-        bool flag = false;
-        for (int i = 0; i < n; i++)
-        {
-            if (check[i] == false)
-            {
-                flag = true;
-            }
-        }
-        if (flag)
-        {
-            for (int i = n; i < n * n; i++)
-            {
-                if (check[i] == false)
-                {
-                    cout << "YES" << endl;
-                    break;
-                }
-            }
-        }
-        else
-        {
-            cout << "NO" << endl;
-        }
+        ll n;
+        cin >> n;
+        ll k = (n + 1) / 2;
+        cout << k << endl;
+        // 1 1 2 2 3
+        // 1 1 -2
     }
 }
