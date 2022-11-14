@@ -24,7 +24,7 @@ int main()
         ll n;
         cin >> n;
         vector<ll> v(n);
-        vector<pair<ll, bool>> prefix(n + 1);
+        vector<pair<ll, bool>> prefix(n + 1, {0, false});
         prefix[0] = {0, false};
         ll mx = 0, mxidx = 0;
         for (ll i = 0; i < n; i++)
