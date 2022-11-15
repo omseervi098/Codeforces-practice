@@ -24,49 +24,30 @@ int main()
         ll n;
         cin >> n;
         vector<ll> v(n);
-        vector<pair<ll, bool>> prefix(n + 1, {0, false});
-        prefix[0] = {0, false};
-        ll mx = 0, mxidx = 0;
+        ll curr_sum = 0;
+        ll mx = 0, cnt = 0;
+        map<ll, ll> mp;
+        bool flag = false;
         for (ll i = 0; i < n; i++)
         {
             cin >> v[i];
-
-            prefix[i + 1].first = prefix[i].first + v[i];
-            prefix[i + 1].second = prefix[i].second;
             if (v[i] == 0)
             {
-                prefix[i + 1].second = true;
+                if (flag)
+                    cnt += mx;
+                else
+                    cnt += mp[0];
+                flag = 1;
+                mx = 0;
+                mp.clear();
             }
-            if (prefix[i + 1].first == 0)
-            {
-                mx++;
-            }
+            curr_sum += v[i];
+            mx = max(mx, ++mp[curr_sum]);
         }
-        if (mx == n)
-        {
-            cout << mx << endl;
-            continue;
-        }
-        unordered_map<ll, ll> mp, m;
-
-        for (ll i = 1; i <= n; i++)
-        {
-
-            if (prefix[i].second == true)
-                mp[prefix[i].first] += 1;
-            if (prefix[i].first == 0)
-                mx++;
-        }
-        int cnt1 = 0;
-        for (auto it : mp)
-        {
-            if (it.second > cnt1)
-            {
-                cnt1 = it.second;
-                mxidx = it.first;
-            }
-        }
-
-        cout << mx + cnt1 << endl;
+        if (flag)
+            cnt += mx;
+        else
+            cnt += mp[0];
+        cout << cnt << endl;
     }
 }
