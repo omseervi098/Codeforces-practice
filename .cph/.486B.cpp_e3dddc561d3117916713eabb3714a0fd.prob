@@ -1,1 +1,0 @@
-{"name":"Local: 486B","url":"d:\\Codeforces Practice\\486B.cpp","tests":[{"id":1667349902948,"input":"2 3\n1 1 1\n1 1 1\n","output":""},{"id":1667349914424,"input":"2 3\n0 1 0\n1 1 1\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces Practice\\486B.cpp","group":"local","local":true}

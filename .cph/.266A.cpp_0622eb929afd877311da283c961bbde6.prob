@@ -1,1 +1,0 @@
-{"name":"Local: 266A","url":"d:\\Codeforces Practice\\266A.cpp","tests":[{"id":1664213938935,"input":"3\nRRG","output":""},{"id":1664213945825,"input":"4\nBRBG\n","output":""},{"id":1664214024031,"input":"5\nRRRRR","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Codeforces Practice\\266A.cpp","group":"local","local":true}
