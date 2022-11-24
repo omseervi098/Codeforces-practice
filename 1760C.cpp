@@ -25,13 +25,15 @@ int main()
         vector<ll> v(n);
         for (auto &i : v)
             cin >> i;
-        ll mx = *max_element(v.begin(), v.end());
-        for (auto i : v)
+        vector<ll> cpy = v;
+        sort(cpy.begin(), cpy.end(), greater<>());
+
+        for (int i = 0; i < n; i++)
         {
-            if (i == mx)
-                cout << 0 << " ";
+            if (v[i] != cpy[0])
+                cout << v[i] - cpy[0] << " ";
             else
-                cout << i - mx << " ";
+                cout << v[i] - cpy[1] << " ";
         }
         cout << endl;
     }
