@@ -1,2 +1,5 @@
-*.h
+*.bin
+*.exe
+/.vscode
+/.cph
 .gitignore
