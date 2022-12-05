@@ -1,2 +1,2 @@
 # Codeforces-practice
-if u liked it star this repo !!
+ Star this repo if you liked it !!
