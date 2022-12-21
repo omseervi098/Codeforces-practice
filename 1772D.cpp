@@ -23,41 +23,24 @@ int main(){
    test(t){
         int n;
         cin>>n;
-        vector<ll> v(n);
-        for(auto &i:v){
+        vector<ll> a(n);
+        for(auto &i:a){
             cin>>i;
         }
-    
-        //check if v is already sorted
-        int i=0;
-        for(i=0;i<v.size()-1;i++){
-            if(v[i]>v[i+1]){
-                break;
-            }   
+        int mn=INT_MAX,mx=0;
+        for(int i=0;i<n-1;i++){
+            int midL=(a[i]+a[i+1])/2.0;
+            int midR=(a[i+1]+a[i]+1)/2.0;
+            if(a[i]<a[i+1])
+            mn=min(mn,midL);
+            if(a[i]>a[i+1])
+            mx=max(mx,midR);
         }
-        if(i==v.size()-1){
-            cout<<"0"<<endl;
-            continue;
-        }else{
-            vector<ll> avg;
-            int i=0;
-            for( i=0;i<v.size()-1;i++){
-                ll x=(v[i]+v[i+1])/2.0+(v[i]+v[i+1])%2;
-                ll a=abs(v[0]-x),j=1;
-                for(j=1;j<v.size();j++){
-                    ll b=abs(v[j]-x);
-                    if(b<a)
-                        break;
-                    else
-                        a=b;
-                }
-                if(j==v.size()){
-                    cout<<x<<endl;
-                    break;
-                }     
-            }
-            if(i==v.size()-1)
-                cout<<-1<<endl;
+        if(mx<=mn){
+            cout<<mx<<endl;
+        }
+        else{
+            cout<<-1<<endl;
         }
     }
 }
