@@ -15,21 +15,12 @@ typedef priority_queue<int> maxhp;
 #define present(c,x) ((c).find(x) != (c).end()) 
 #define test(t) while(t--) 
 int main(){
-   int n;
-   cin>>n;
-   vvi v(n,vi(3,0));
-   int cnt=0;
-   for(auto &it:v){
-    int a,b,c;
-    cin>>a>>b>>c;
-    it[0]=a;
-    it[1]=b;
-    it[2]=c;
-    int sm=it[0]+it[1]+it[2];
-    if(sm>=2){
-        cnt++;
-    }
+   int t;
+   cin>>t;
+   test(t){
+    int a,b;
+    cin>>a>>b;
+    int ans=abs(a-b);
+    cout<<(ans+9)/10<<endl;
    }
-   cout<<cnt<<endl;
-
 }
